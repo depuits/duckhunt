@@ -1,0 +1,50 @@
+﻿@keyframes duckWing {
+	0% {
+		background-position: 0px -228px;
+	}
+
+	33% {
+		background-position: -76px -228px;
+	}
+
+	66% {
+		background-position: -152px -228px;
+	}
+
+	100% {
+		background-position: -152px -228px;
+	}
+}
+
+@keyframes duckDie {
+	0% {
+		background-position: 0px -464px;
+	}
+
+	66% {
+		background-position: -76px -464px;
+	}
+
+	100% {
+		background-position: -76px -464px;
+	}
+}
+
+.duck {
+	position: absolute;
+	background: url('duckSprite.png') no-repeat;
+	height: 76px;
+	display: block;
+	width: 76px;
+	position: fixed;
+	background-position: 0px -228px;
+	animation: duckWing 200ms infinite step-end alternate;
+	pointer-events: auto;
+}
+
+.duck.dead {
+	animation-fill-mode: forwards;
+	background-position: -76px -464px;
+	animation: duckDie .45s 1 step-end;
+}
+
