@@ -8,16 +8,16 @@ Include `js` and `css` in html:
 
 ```html
 <link type="text/css" rel="stylesheet" href="duckhunt.css" />
-<script type="text/javascript" src="duckHunt.js"></script>
+<script type="text/javascript" src="duckhunt.js"></script>
 ```
 
-Create element to place the container in
+Create element to place the container in:
 
 ```html
 <div id="flySpace"></div>
 ```
 
-Create an instance of the duckhunt
+Create an instance of the duckhunt passing the id of parent element:
 
 ```js
 var hunter = Duckhunt.create('flySpace');
